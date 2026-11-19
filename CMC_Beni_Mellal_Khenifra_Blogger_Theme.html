@@ -940,6 +940,84 @@ button#submitBtn:hover{box-shadow:0 12px 28px rgba(131,201,194,.2)!important}
 @keyframes cmcLogoShine{0%,55%{left:-50%}100%{left:130%}}
 @media(prefers-reduced-motion:reduce){.cmc-brand-mark,.cmc-brand-mark::after{animation:none}}
 
+
+/* === VIBRANT FESTIVAL PALETTE: ENERGETIC BUT COMFORTABLE === */
+:root{
+  --navy:#111638;--blue:#5277f4;--cyan:#4ce1d2;--purple:#a78bfa;
+  --yellow:#ffc66d;--white:#f7f8ff;--muted:#c0c8e5;--error:#ff8296;
+}
+html{background:#111638;scroll-behavior:smooth}
+body{
+  background-color:#111638!important;
+  background-image:
+    radial-gradient(ellipse at 12% 12%,rgba(38,196,218,.24),transparent 38%),
+    radial-gradient(ellipse at 88% 18%,rgba(139,92,246,.25),transparent 40%),
+    radial-gradient(ellipse at 70% 88%,rgba(255,130,105,.16),transparent 38%),
+    linear-gradient(135deg,#101633 0%,#17204a 48%,#201b49 100%)!important;
+}
+body:before{background:radial-gradient(circle,rgba(45,224,220,.78),rgba(46,119,244,.28) 48%,transparent 72%)!important;opacity:.30!important;filter:blur(125px)!important;animation-duration:12s!important}
+body:after{background:radial-gradient(circle,rgba(172,115,255,.72),rgba(255,123,131,.22) 48%,transparent 72%)!important;opacity:.27!important;filter:blur(135px)!important;animation-duration:15s!important}
+#particleCanvas{opacity:.72!important;filter:saturate(1.2)}
+.arcade-grid{opacity:.11!important;background-image:linear-gradient(rgba(100,220,240,.16) 1px,transparent 1px),linear-gradient(90deg,rgba(100,220,240,.16) 1px,transparent 1px)!important}
+.neon-orb{opacity:.78!important;filter:saturate(1.1)!important}
+.flying-symbol{opacity:.88!important;filter:drop-shadow(0 0 7px currentColor)!important;text-shadow:0 0 8px currentColor,0 0 18px currentColor!important}
+.laser-beam{height:2px!important;opacity:.52!important;box-shadow:0 0 9px hsla(var(--hue),90%,72%,.72)!important}
+.game-float{border-color:rgba(111,220,239,.34)!important;background:linear-gradient(145deg,rgba(50,100,180,.38),rgba(126,81,190,.30),rgba(29,175,174,.18))!important;box-shadow:0 0 22px rgba(68,208,229,.17),inset 0 0 18px rgba(255,255,255,.06)!important;animation:floatGame 6s ease-in-out infinite,vibrantPulse 3.8s ease-in-out infinite alternate!important}
+@keyframes vibrantPulse{from{box-shadow:0 0 10px rgba(76,225,210,.10),inset 0 0 8px rgba(255,255,255,.03)}to{box-shadow:0 0 25px rgba(76,225,210,.24),0 0 34px rgba(167,139,250,.16),inset 0 0 16px rgba(255,255,255,.08)}}
+.game-preview,.info-box,.card,.activity,.control-btn,.count-unit{border-color:rgba(139,190,255,.22)!important}
+.game-preview{background:rgba(22,35,79,.78)!important;box-shadow:0 14px 38px rgba(0,0,0,.22),0 0 22px rgba(76,225,210,.11)!important}
+.preview-art{background:linear-gradient(135deg,#247ed0,#7457d9,#24b8b0)!important}
+.preview-two .preview-art{background:linear-gradient(135deg,#ff9c68,#e66c9a,#8760db)!important}
+.preview-three .preview-art{background:linear-gradient(135deg,#18a99a,#377fdb,#7959ce)!important}
+.logo{filter:none!important;text-shadow:0 0 13px rgba(76,225,210,.32),0 0 30px rgba(167,139,250,.22)!important}
+.logo span:not(.logo-icon){text-shadow:0 0 13px rgba(76,225,210,.38),0 0 30px rgba(167,139,250,.28)!important}
+.logo span:first-of-type{background:linear-gradient(90deg,#55e6dc,#9d9bff,#ffbd79)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important}
+.logo-icon{color:#ffc66d!important}
+.hero-subtitle,.info-label,.form-heading p,.hint,.footer{color:#c0c8e5!important}
+.tag{color:#75eee1!important;border-color:rgba(76,225,210,.38)!important;background:linear-gradient(100deg,rgba(76,225,210,.10),rgba(167,139,250,.12))!important;box-shadow:0 0 22px rgba(76,225,210,.08)!important}
+.info-box{background:linear-gradient(145deg,rgba(34,57,111,.62),rgba(52,41,105,.55))!important;box-shadow:0 9px 27px rgba(0,0,0,.16),inset 0 0 16px rgba(255,255,255,.025)!important}
+.info-box:hover{border-color:rgba(76,225,210,.68)!important;background:linear-gradient(145deg,rgba(38,111,147,.48),rgba(93,67,155,.45))!important}
+.card{background:linear-gradient(145deg,rgba(20,34,78,.94),rgba(31,30,78,.94))!important;box-shadow:0 25px 70px rgba(0,0,0,.32),0 0 30px rgba(76,225,210,.07)!important}
+.card:before{background:linear-gradient(90deg,#4ce1d2,#668bff,#b18bff,#ffbd79)!important}
+.field input{background:rgba(238,243,255,.055)!important;border-color:rgba(159,183,255,.23)!important;color:#f7f8ff!important}
+.field input::placeholder{color:#9daacf!important}
+.field input:focus{border-color:#4ce1d2!important;background:rgba(76,225,210,.09)!important;box-shadow:0 0 0 3px rgba(76,225,210,.13),0 0 22px rgba(76,225,210,.12)!important}
+.field.is-focused>label{color:#75eee1!important;text-shadow:0 0 12px rgba(76,225,210,.35)!important}
+.field.is-typing:before{background:#4ce1d2!important;box-shadow:0 0 8px #4ce1d2,0 0 17px #4ce1d2!important}
+.field.has-value:not(.is-focused) input{border-color:rgba(76,225,210,.35)!important;background:rgba(76,225,210,.055)!important}
+.input-particle{box-shadow:0 0 8px #4ce1d2,0 0 15px #4ce1d2!important}
+.required{color:#ffc66d!important}
+.counter{color:#ffd18e!important;background:rgba(255,198,109,.12)!important;border-color:rgba(255,198,109,.32)!important}
+.counter.complete{color:#7ff0c5!important;border-color:rgba(127,240,197,.62)!important;background:rgba(42,190,145,.14)!important}
+.activity{background:linear-gradient(120deg,rgba(238,243,255,.045),rgba(139,117,220,.055))!important}
+.activity:hover{border-color:rgba(76,225,210,.7)!important;background:linear-gradient(120deg,rgba(76,225,210,.12),rgba(167,139,250,.12))!important}
+.activity:has(input:checked){border-color:#4ce1d2!important;background:linear-gradient(120deg,rgba(36,155,190,.28),rgba(126,93,206,.23))!important;box-shadow:0 0 19px rgba(76,225,210,.16)!important}
+.activity.is-selected{border-color:#4ce1d2!important;box-shadow:0 0 19px rgba(76,225,210,.18)!important}
+.activity input{accent-color:#4ce1d2!important}
+.progress{background:rgba(238,243,255,.11)!important}
+.progress-bar{background:linear-gradient(90deg,#4ce1d2,#668bff,#b18bff,#ffc66d)!important;box-shadow:0 0 12px rgba(76,225,210,.25)!important}
+button#submitBtn{background:linear-gradient(105deg,#ffc66d,#ff9e85 48%,#f3a4ce)!important;color:#211b42!important;box-shadow:0 9px 27px rgba(255,158,133,.20)!important}
+button#submitBtn:hover{box-shadow:0 13px 32px rgba(255,158,133,.29),0 0 20px rgba(76,225,210,.13)!important}
+.control-btn{background:rgba(238,243,255,.07)!important;color:#edf1ff!important;border-color:rgba(159,183,255,.22)!important}
+.control-btn:hover,.control-btn.music-active{background:linear-gradient(100deg,rgba(76,225,210,.17),rgba(167,139,250,.16))!important;border-color:rgba(76,225,210,.52)!important;box-shadow:0 0 18px rgba(76,225,210,.15)!important}
+.music-bars i{background:#4ce1d2!important}
+.countdown-label{color:#75eee1!important}
+.count-unit{background:linear-gradient(145deg,rgba(83,105,205,.16),rgba(167,139,250,.12))!important;border-color:rgba(167,139,250,.30)!important;box-shadow:inset 0 0 14px rgba(167,139,250,.06)!important}
+.count-unit small{color:#c0c8e5!important}
+.organizer-kicker{color:#c9fff8!important;border-color:rgba(76,225,210,.35)!important;background:linear-gradient(100deg,rgba(76,225,210,.12),rgba(167,139,250,.16),rgba(255,198,109,.09))!important}
+.organizer-kicker:before,.organizer-kicker:after{background:#4ce1d2!important;box-shadow:0 0 10px #4ce1d2,0 0 20px #4ce1d2!important}
+.organizer-signature{border-color:rgba(255,198,109,.34)!important;background:linear-gradient(115deg,rgba(76,225,210,.11),rgba(167,139,250,.15),rgba(255,198,109,.10))!important;box-shadow:0 12px 32px rgba(0,0,0,.2),0 0 22px rgba(76,225,210,.08)!important}
+.organizer-seal{color:#201b42!important;background:linear-gradient(145deg,#ffe0a1,#ffad78)!important;box-shadow:0 0 18px rgba(255,198,109,.22)!important}
+.organizer-copy small{color:#c0c8e5!important}
+.organizer-copy strong{color:#fff!important;text-shadow:0 0 14px rgba(76,225,210,.28)!important}
+.organizer-copy em{color:#ffd18e!important}
+.cmc-brand-mark{border-color:rgba(76,225,210,.48)!important;box-shadow:0 10px 30px rgba(25,44,110,.25),0 0 30px rgba(76,225,210,.16)!important}
+#toast{border-color:rgba(76,225,210,.35)!important;background:rgba(18,29,69,.94)!important;color:#efffff!important}
+#scrollLine{background:linear-gradient(90deg,#4ce1d2,#668bff,#b18bff,#ffc66d)!important;box-shadow:0 0 12px rgba(76,225,210,.45)!important}
+.confetti-piece{filter:saturate(1.12)!important}
+@media(max-width:600px){.flying-symbol{opacity:.52!important}.neon-orb{opacity:.5!important}}
+@media(prefers-reduced-motion:reduce){body:before,body:after,.neon-orb,.flying-symbol,.laser-beam{animation:none!important}}
+
 </style>
 </head>
 
@@ -1226,8 +1304,8 @@ const formCard=document.querySelector('.card');
 if(matchMedia('(pointer:fine)').matches&&!reduceMotion){addEventListener('pointermove',e=>{document.documentElement.style.setProperty('--mouse-x',e.clientX+'px');document.documentElement.style.setProperty('--mouse-y',e.clientY+'px');const r=formCard.getBoundingClientRect();if(e.clientX>=r.left&&e.clientX<=r.right&&e.clientY>=r.top&&e.clientY<=r.bottom){const x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;formCard.style.setProperty('--shine-x',(x*100)+'%');formCard.style.setProperty('--shine-y',(y*100)+'%');formCard.style.transform=`perspective(1100px) rotateX(${(0.5-y)*3.8}deg) rotateY(${(x-.5)*3.8}deg)`}else formCard.style.transform='perspective(1100px) rotateX(0) rotateY(0)'},{passive:true})}
 // Original synthesized electronic gaming ambience. Starts only after visitor taps MUSIC.
 let musicEnabled=false,musicContext=null,musicTimer=null,musicStep=0,musicNodes=[];
-const melody=[392,523.25,659.25,587.33,523.25,440,493.88,587.33,659.25,783.99,659.25,587.33,523.25,440,392,493.88];
-function startArcadeMusic(){try{const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;musicContext=musicContext||new AC();if(musicContext.state==='suspended')musicContext.resume();musicEnabled=true;const master=musicContext.createGain();master.gain.value=.16;master.connect(musicContext.destination);musicNodes.push(master);const bass=musicContext.createOscillator(),bassGain=musicContext.createGain();bass.type='triangle';bass.frequency.value=65.4;bassGain.gain.value=.055;bass.connect(bassGain);bassGain.connect(master);bass.start();musicNodes.push(bass,bassGain);const pad=musicContext.createOscillator(),padGain=musicContext.createGain(),filter=musicContext.createBiquadFilter();pad.type='sawtooth';pad.frequency.value=130.81;filter.type='lowpass';filter.frequency.value=430;padGain.gain.value=.018;pad.connect(filter);filter.connect(padGain);padGain.connect(master);pad.start();musicNodes.push(pad,padGain,filter);let beat=0;musicTimer=setInterval(()=>{if(!musicEnabled||!musicContext)return;const t=musicContext.currentTime;const note=melody[musicStep%melody.length];const osc=musicContext.createOscillator(),g=musicContext.createGain(),f=musicContext.createBiquadFilter();osc.type='sine';osc.frequency.setValueAtTime(note,t);osc.frequency.exponentialRampToValueAtTime(note*1.006,t+.28);f.type='lowpass';f.frequency.value=1500;g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.12,t+.035);g.gain.exponentialRampToValueAtTime(.0001,t+.48);osc.connect(f);f.connect(g);g.connect(master);osc.start(t);osc.stop(t+.5);const bassFreq=[65.41,73.42,55,82.41][Math.floor(musicStep/4)%4];bass.frequency.setTargetAtTime(bassFreq,t,.12);pad.frequency.setTargetAtTime([130.81,146.83,110,164.81][Math.floor(musicStep/4)%4],t,.3);if(beat%4===0){const kick=musicContext.createOscillator(),kg=musicContext.createGain();kick.type='sine';kick.frequency.setValueAtTime(105,t);kick.frequency.exponentialRampToValueAtTime(42,t+.13);kg.gain.setValueAtTime(.13,t);kg.gain.exponentialRampToValueAtTime(.0001,t+.16);kick.connect(kg);kg.connect(master);kick.start(t);kick.stop(t+.17)}musicStep++;beat++},360);return true}catch(err){console.warn('Audio not available',err);return false}}
+const melody=[523.25,659.25,783.99,659.25,587.33,698.46,880,783.99,659.25,783.99,987.77,880,783.99,698.46,659.25,587.33];
+function startArcadeMusic(){try{const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;musicContext=musicContext||new AC();if(musicContext.state==='suspended')musicContext.resume();musicEnabled=true;const master=musicContext.createGain();master.gain.value=.115;master.connect(musicContext.destination);musicNodes.push(master);const bass=musicContext.createOscillator(),bassGain=musicContext.createGain();bass.type='triangle';bass.frequency.value=65.4;bassGain.gain.value=.045;bass.connect(bassGain);bassGain.connect(master);bass.start();musicNodes.push(bass,bassGain);const pad=musicContext.createOscillator(),padGain=musicContext.createGain(),filter=musicContext.createBiquadFilter();pad.type='sawtooth';pad.frequency.value=130.81;filter.type='lowpass';filter.frequency.value=430;padGain.gain.value=.014;pad.connect(filter);filter.connect(padGain);padGain.connect(master);pad.start();musicNodes.push(pad,padGain,filter);let beat=0;musicTimer=setInterval(()=>{if(!musicEnabled||!musicContext)return;const t=musicContext.currentTime;const note=melody[musicStep%melody.length];const osc=musicContext.createOscillator(),g=musicContext.createGain(),f=musicContext.createBiquadFilter();osc.type='sine';osc.frequency.setValueAtTime(note,t);osc.frequency.exponentialRampToValueAtTime(note*1.006,t+.28);f.type='lowpass';f.frequency.value=1500;g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.12,t+.035);g.gain.exponentialRampToValueAtTime(.0001,t+.48);osc.connect(f);f.connect(g);g.connect(master);osc.start(t);osc.stop(t+.5);const bassFreq=[65.41,73.42,55,82.41][Math.floor(musicStep/4)%4];bass.frequency.setTargetAtTime(bassFreq,t,.12);pad.frequency.setTargetAtTime([130.81,146.83,110,164.81][Math.floor(musicStep/4)%4],t,.3);if(beat%4===0){const kick=musicContext.createOscillator(),kg=musicContext.createGain();kick.type='sine';kick.frequency.setValueAtTime(105,t);kick.frequency.exponentialRampToValueAtTime(42,t+.13);kg.gain.setValueAtTime(.085,t);kg.gain.exponentialRampToValueAtTime(.0001,t+.16);kick.connect(kg);kg.connect(master);kick.start(t);kick.stop(t+.17)}musicStep++;beat++},320);return true}catch(err){console.warn('Audio not available',err);return false}}
 function stopArcadeMusic(){musicEnabled=false;if(musicTimer){clearInterval(musicTimer);musicTimer=null}if(musicContext){musicNodes.forEach(n=>{try{if(n.stop)n.stop()}catch(e){}});musicNodes=[];try{musicContext.close()}catch(e){}musicContext=null}}
 const musicToggle=document.getElementById('musicToggle');musicToggle.addEventListener('click',()=>{if(!musicEnabled){const ok=startArcadeMusic();if(ok){musicToggle.innerHTML='🎵 MUSIC ON <span class="music-bars"><i></i><i></i><i></i><i></i></span>';musicToggle.classList.add('music-active');musicToggle.setAttribute('aria-pressed','true');showToast('🎧 Gaming soundtrack activated')}else showToast('Audio non disponible sur ce navigateur')}else{stopArcadeMusic();musicToggle.textContent='🎵 MUSIC OFF';musicToggle.classList.remove('music-active');musicToggle.setAttribute('aria-pressed','false');showToast('🔇 Musique arrêtée')}});
 // UI sound effects are independent from the background soundtrack
