@@ -1,0 +1,839 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080f2b">
+<title>CMC FUN DAY | Registration</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy:#080f2b;
+  --blue:#176bff;
+  --cyan:#35d5f5;
+  --purple:#8855ff;
+  --yellow:#ffcf40;
+  --white:#ffffff;
+  --muted:#aeb9d4;
+  --error:#ff5e78;
+}
+
+* {
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body {
+  font-family:'Outfit',sans-serif;
+  background:var(--navy);
+  color:var(--white);
+  min-height:100vh;
+  padding:35px 16px;
+  overflow-x:hidden;
+  position:relative;
+}
+
+/* Animated background */
+
+body::before,
+body::after {
+  content:"";
+  position:fixed;
+  width:420px;
+  height:420px;
+  border-radius:50%;
+  filter:blur(100px);
+  opacity:.25;
+  z-index:-1;
+  animation:float 9s ease-in-out infinite alternate;
+}
+
+body::before {
+  background:#176bff;
+  top:-140px;
+  left:-140px;
+}
+
+body::after {
+  background:#8855ff;
+  bottom:-160px;
+  right:-120px;
+  animation-delay:2s;
+}
+
+@keyframes float {
+  from {transform:translate(0,0) scale(1);}
+  to {transform:translate(65px,55px) scale(1.2);}
+}
+
+/* Background decorations */
+
+.bg-shape {
+  position:fixed;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:50%;
+  z-index:-1;
+  pointer-events:none;
+}
+
+.shape1 {
+  width:250px;
+  height:250px;
+  top:25%;
+  right:-120px;
+}
+
+.shape2 {
+  width:180px;
+  height:180px;
+  bottom:15%;
+  left:-90px;
+}
+
+/* Main container */
+
+.container {
+  max-width:650px;
+  margin:auto;
+  animation:appear .9s ease both;
+}
+
+@keyframes appear {
+  from {
+    opacity:0;
+    transform:translateY(35px);
+  }
+  to {
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* Hero */
+
+.hero {
+  text-align:center;
+  padding:20px 10px 30px;
+}
+
+.logo {
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  font-size:2.7rem;
+  font-weight:900;
+  letter-spacing:-1.5px;
+}
+
+.logo span {
+  background:linear-gradient(90deg,var(--cyan),var(--yellow));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.logo-icon {
+  font-size:2rem;
+  animation:rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}
+
+.hero-subtitle {
+  color:var(--muted);
+  font-size:1rem;
+  margin-top:8px;
+}
+
+.tag {
+  display:inline-block;
+  margin-top:17px;
+  padding:7px 17px;
+  border:1px solid rgba(53,213,245,.35);
+  border-radius:50px;
+  color:var(--cyan);
+  background:rgba(53,213,245,.08);
+  font-size:.78rem;
+  letter-spacing:2px;
+  font-weight:700;
+}
+
+/* Event information */
+
+.event-info {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+  margin-bottom:22px;
+}
+
+.info-box {
+  text-align:center;
+  padding:15px 8px;
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:15px;
+  background:rgba(255,255,255,.055);
+  backdrop-filter:blur(15px);
+  transition:.3s;
+}
+
+.info-box:hover {
+  transform:translateY(-5px);
+  border-color:var(--cyan);
+  background:rgba(53,213,245,.09);
+}
+
+.info-icon {
+  font-size:1.35rem;
+  margin-bottom:7px;
+}
+
+.info-label {
+  color:var(--muted);
+  font-size:.7rem;
+  margin-bottom:4px;
+}
+
+.info-value {
+  font-size:.82rem;
+  font-weight:700;
+}
+
+/* Form card */
+
+.card {
+  position:relative;
+  padding:30px;
+  border:1px solid rgba(255,255,255,.13);
+  border-radius:25px;
+  background:rgba(17,28,63,.82);
+  backdrop-filter:blur(25px);
+  box-shadow:0 25px 70px rgba(0,0,0,.35);
+  overflow:hidden;
+}
+
+.card::before {
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:4px;
+  background:linear-gradient(90deg,var(--cyan),var(--purple),var(--yellow));
+}
+
+.form-heading {
+  margin-bottom:25px;
+}
+
+.form-heading h2 {
+  font-size:1.5rem;
+  font-weight:800;
+}
+
+.form-heading p {
+  color:var(--muted);
+  font-size:.88rem;
+  margin-top:6px;
+}
+
+/* Fields */
+
+.field {
+  margin-bottom:18px;
+}
+
+.field label {
+  display:block;
+  margin-bottom:8px;
+  font-size:.9rem;
+  font-weight:600;
+}
+
+.required {
+  color:var(--yellow);
+}
+
+.field input {
+  width:100%;
+  padding:14px 15px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.14);
+  outline:none;
+  background:rgba(255,255,255,.055);
+  color:white;
+  font-family:inherit;
+  font-size:.95rem;
+  transition:.3s;
+}
+
+.field input::placeholder {
+  color:#8995b3;
+}
+
+.field input:focus {
+  border-color:var(--cyan);
+  background:rgba(53,213,245,.06);
+  box-shadow:0 0 0 3px rgba(53,213,245,.12);
+}
+
+/* Activity heading */
+
+.activity-header {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin-bottom:13px;
+}
+
+.activity-header label {
+  font-weight:700;
+  font-size:.95rem;
+}
+
+.counter {
+  min-width:65px;
+  padding:7px 12px;
+  text-align:center;
+  border-radius:50px;
+  color:var(--yellow);
+  background:rgba(255,207,64,.12);
+  border:1px solid rgba(255,207,64,.3);
+  font-weight:800;
+  font-size:.85rem;
+}
+
+.activities {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:11px;
+}
+
+.activity {
+  position:relative;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-height:57px;
+  padding:12px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:13px;
+  background:rgba(255,255,255,.045);
+  cursor:pointer;
+  transition:all .25s ease;
+  user-select:none;
+  overflow:hidden;
+}
+
+.activity:hover {
+  transform:translateY(-3px);
+  border-color:var(--cyan);
+  background:rgba(53,213,245,.09);
+}
+
+.activity:has(input:checked) {
+  border-color:var(--cyan);
+  background:linear-gradient(120deg,rgba(23,107,255,.28),rgba(53,213,245,.13));
+  box-shadow:0 0 15px rgba(53,213,245,.12);
+}
+
+.activity input {
+  accent-color:var(--cyan);
+  width:17px;
+  height:17px;
+  flex-shrink:0;
+  cursor:pointer;
+}
+
+.activity span {
+  font-size:.86rem;
+  font-weight:500;
+}
+
+.activity:has(input:disabled):not(:has(input:checked)) {
+  opacity:.35;
+  cursor:not-allowed;
+  filter:grayscale(.6);
+  transform:none;
+}
+
+.activity input:disabled {
+  cursor:not-allowed;
+}
+
+.hint {
+  color:var(--muted);
+  font-size:.78rem;
+  margin-top:12px;
+  line-height:1.6;
+}
+
+/* Progress */
+
+.progress {
+  height:5px;
+  width:100%;
+  background:rgba(255,255,255,.1);
+  border-radius:20px;
+  margin-top:13px;
+  overflow:hidden;
+}
+
+.progress-bar {
+  width:0%;
+  height:100%;
+  border-radius:20px;
+  background:linear-gradient(90deg,var(--cyan),var(--purple),var(--yellow));
+  transition:width .3s ease;
+}
+
+/* Submit */
+
+button {
+  width:100%;
+  margin-top:25px;
+  padding:16px;
+  border:0;
+  border-radius:13px;
+  background:linear-gradient(100deg,var(--yellow),#ffad33);
+  color:#101b3d;
+  font-family:inherit;
+  font-size:1rem;
+  font-weight:800;
+  cursor:pointer;
+  transition:.3s;
+  box-shadow:0 8px 25px rgba(255,207,64,.18);
+}
+
+button:hover {
+  transform:translateY(-3px);
+  box-shadow:0 12px 30px rgba(255,207,64,.3);
+}
+
+button:active {
+  transform:scale(.98);
+}
+
+button:disabled {
+  opacity:.6;
+  cursor:wait;
+  transform:none;
+}
+
+/* Messages */
+
+#msg {
+  display:none;
+  margin-top:16px;
+  padding:14px;
+  border-radius:12px;
+  text-align:center;
+  font-size:.88rem;
+  font-weight:600;
+}
+
+#msg.ok {
+  display:block;
+  background:rgba(37,190,111,.15);
+  border:1px solid rgba(37,190,111,.4);
+  color:#72e5a6;
+}
+
+#msg.err {
+  display:block;
+  background:rgba(255,94,120,.13);
+  border:1px solid rgba(255,94,120,.35);
+  color:#ff879b;
+}
+
+/* Footer */
+
+.footer {
+  text-align:center;
+  padding:24px 10px 5px;
+  color:#8995b3;
+  font-size:.78rem;
+}
+
+.footer strong {
+  color:var(--cyan);
+}
+
+/* Mobile */
+
+@media(max-width:480px) {
+  body {
+    padding:20px 12px;
+  }
+
+  .logo {
+    font-size:2.15rem;
+  }
+
+  .hero {
+    padding-top:12px;
+  }
+
+  .event-info {
+    gap:6px;
+  }
+
+  .info-box {
+    padding:12px 5px;
+  }
+
+  .info-value {
+    font-size:.72rem;
+  }
+
+  .info-label {
+    font-size:.65rem;
+  }
+
+  .card {
+    padding:21px 16px;
+    border-radius:19px;
+  }
+
+  .activities {
+    grid-template-columns:1fr;
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after {
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg-shape shape1"></div>
+<div class="bg-shape shape2"></div>
+
+<main class="container">
+
+  <section class="hero">
+
+    <div class="logo">
+      CMC <span>FUN DAY</span>
+      <span class="logo-icon">✦</span>
+    </div>
+
+    <p class="hero-subtitle">
+      يوم ثقافي وترفيهي · Journée culturelle et récréative
+    </p>
+
+    <div class="tag">LET'S PLAY · LET'S CONNECT · LET'S HAVE FUN</div>
+
+  </section>
+
+  <section class="event-info">
+
+    <div class="info-box">
+      <div class="info-icon">📅</div>
+      <div class="info-label">DATE</div>
+      <div class="info-value">26 / 11 / 2026</div>
+    </div>
+
+    <div class="info-box">
+      <div class="info-icon">🕘</div>
+      <div class="info-label">HORAIRE</div>
+      <div class="info-value">09:00 → 14:00</div>
+    </div>
+
+    <div class="info-box">
+      <div class="info-icon">📍</div>
+      <div class="info-label">LIEU</div>
+      <div class="info-value">COP</div>
+    </div>
+
+  </section>
+
+  <section class="card">
+
+    <div class="form-heading">
+      <h2>🚀 Inscription</h2>
+      <p>Remplissez le formulaire et choisissez vos activités préférées.</p>
+    </div>
+
+    <form id="form" novalidate>
+
+      <div class="field">
+        <label for="nom">Nom <span class="required">*</span></label>
+        <input type="text" id="nom" name="nom"
+               placeholder="Votre nom" autocomplete="family-name" required>
+      </div>
+
+      <div class="field">
+        <label for="prenom">Prénom <span class="required">*</span></label>
+        <input type="text" id="prenom" name="prenom"
+               placeholder="Votre prénom" autocomplete="given-name" required>
+      </div>
+
+      <div class="field">
+        <label for="telephone">Téléphone <span class="required">*</span></label>
+        <input type="tel" id="telephone" name="telephone"
+               placeholder="06 12 34 56 78" autocomplete="tel" required>
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email"
+               placeholder="exemple@mail.com" autocomplete="email">
+      </div>
+
+      <div class="field">
+        <label for="filiere">Filière / Niveau</label>
+        <input type="text" id="filiere" name="filiere"
+               placeholder="Ex : Développement digital, 1ère année">
+      </div>
+
+      <div class="field">
+
+        <div class="activity-header">
+          <label>🎮 Choisissez vos activités <span class="required">*</span></label>
+          <div class="counter" id="activityCount">0/3</div>
+        </div>
+
+        <div class="activities">
+
+          <label class="activity">
+            <input type="checkbox" name="activites" value="UNO">
+            <span>🃏 UNO</span>
+          </label>
+
+          <label class="activity">
+            <input type="checkbox" name="activites" value="Échecs">
+            <span>♟️ Échecs</span>
+          </label>
+
+          <label class="activity">
+            <input type="checkbox" name="activites" value="PlayStation">
+            <span>🎮 PlayStation</span>
+          </label>
+
+          <label class="activity">
+            <input type="checkbox" name="activites" value="Jeux culturels">
+            <span>🧠 Jeux culturels</span>
+          </label>
+
+          <label class="activity">
+            <input type="checkbox" name="activites" value="Jeux d'équipes">
+            <span>🤝 Jeux d'équipes</span>
+          </label>
+
+          <label class="activity">
+            <input type="checkbox" name="activites" value="Jeux de concentration">
+            <span>🎯 Jeux de concentration</span>
+          </label>
+
+          <label class="activity">
+            <input type="checkbox" name="activites" value="Monopoly">
+            <span>🏠 Monopoly</span>
+          </label>
+
+          <label class="activity">
+            <input type="checkbox" name="activites" value="Parchís">
+            <span>🎲 Parchís</span>
+          </label>
+
+          <label class="activity">
+            <input type="checkbox" name="activites" value="Mafia card">
+            <span>🕵️ Mafia card</span>
+          </label>
+
+          <label class="activity">
+            <input type="checkbox" name="activites" value="Quick Eye">
+            <span>👀 Quick Eye</span>
+          </label>
+
+          <label class="activity">
+            <input type="checkbox" name="activites" value="Bottle Hunter">
+            <span>🧴 Bottle Hunter</span>
+          </label>
+
+          <label class="activity">
+            <input type="checkbox" name="activites" value="Reaction Challenge">
+            <span>⚡ Reaction Challenge</span>
+          </label>
+
+        </div>
+
+        <p class="hint">
+          Sélectionnez jusqu'à 3 activités maximum.
+          Vous pouvez modifier vos choix à tout moment.
+        </p>
+
+        <div class="progress">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+      </div>
+
+      <button type="submit" id="submitBtn">
+        VALIDER MON INSCRIPTION ✦
+      </button>
+
+      <div id="msg" role="status" aria-live="polite"></div>
+
+    </form>
+
+  </section>
+
+  <footer class="footer">
+    Made with <strong>♥</strong> for the CMC community
+    <br>
+    <strong>CMC FUN DAY 2026</strong>
+  </footer>
+
+</main>
+
+<script>
+const ENDPOINT = "https://script.google.com/macros/s/AKfycbw3xmllEAZe3QVJIgGOWJzaISrMTbZVn74cbR3Z2z8jLN7C0GTNhU5wkkeGVIMZzT64/exec";
+
+const form = document.getElementById("form");
+const msg = document.getElementById("msg");
+const btn = document.getElementById("submitBtn");
+
+const activityCheckboxes = document.querySelectorAll(
+  'input[name="activites"]'
+);
+
+const activityCount = document.getElementById("activityCount");
+const progressBar = document.getElementById("progressBar");
+
+function updateActivities() {
+
+  const selected = form.querySelectorAll(
+    'input[name="activites"]:checked'
+  ).length;
+
+  activityCount.textContent = selected + "/3";
+
+  progressBar.style.width = (selected / 3 * 100) + "%";
+
+  activityCheckboxes.forEach(checkbox => {
+    checkbox.disabled = selected >= 3 && !checkbox.checked;
+  });
+}
+
+activityCheckboxes.forEach(checkbox => {
+  checkbox.addEventListener("change", updateActivities);
+});
+
+updateActivities();
+
+function showMsg(text, type) {
+  msg.textContent = text;
+  msg.className = type;
+}
+
+function isValidPhone(value) {
+  const cleaned = value.replace(/[\s.-]/g, "");
+  return /^(\+212|0)[5-7]\d{8}$/.test(cleaned);
+}
+
+function isValidEmail(value) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+}
+
+form.addEventListener("submit", async function(e) {
+
+  e.preventDefault();
+
+  msg.className = "";
+  msg.textContent = "";
+
+  const data = {
+    nom: form.elements["nom"].value.trim(),
+    prenom: form.elements["prenom"].value.trim(),
+    telephone: form.elements["telephone"].value.trim(),
+    email: form.elements["email"].value.trim(),
+    filiere: form.elements["filiere"].value.trim(),
+    activites: Array.from(
+      form.querySelectorAll('input[name="activites"]:checked')
+    ).map(item => item.value)
+  };
+
+  if (!data.nom || !data.prenom) {
+    showMsg("Veuillez saisir votre nom et prénom.", "err");
+    return;
+  }
+
+  if (!isValidPhone(data.telephone)) {
+    showMsg("Numéro de téléphone invalide (ex : 06 12 34 56 78).", "err");
+    return;
+  }
+
+  if (data.email && !isValidEmail(data.email)) {
+    showMsg("Adresse email invalide.", "err");
+    return;
+  }
+
+  if (data.activites.length === 0) {
+    showMsg("Veuillez choisir au moins une activité.", "err");
+    return;
+  }
+
+  if (data.activites.length > 3) {
+    showMsg("Vous pouvez choisir 3 activités maximum.", "err");
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = "ENVOI EN COURS...";
+
+  try {
+
+    await fetch(ENDPOINT, {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "text/plain;charset=utf-8"
+      },
+      body: JSON.stringify(data)
+    });
+
+    form.reset();
+
+    updateActivities();
+
+    showMsg(
+      "Votre demande a été envoyée. Vérifiez la confirmation de votre inscription.",
+      "ok"
+    );
+
+  } catch (error) {
+
+    showMsg(
+      "Erreur d'envoi. Veuillez réessayer.",
+      "err"
+    );
+
+  } finally {
+
+    btn.disabled = false;
+    btn.textContent = "VALIDER MON INSCRIPTION ✦";
+
+  }
+
+});
+</script>
+
+</body>
+</html>
